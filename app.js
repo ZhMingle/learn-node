@@ -1,14 +1,5 @@
-const path = require('path')
+const _ = require('lodash')
 
-console.log(path.sep);
+const arr = [1,[2,[3]]]
 
-const filePath = path.join('\content','sub', 'text.txt')
-console.log("🚀 ~ filePath:", filePath)
-
-const base = path.basename(filePath) // base => filename
-console.log("🚀 ~ base:", base)
-
-const absolute = path.resolve(__dirname, 'content', 'sub', 'text.txt')
-console.log("🚀 ~ absolute:", absolute)
-
-
+console.log(_.flattenDeep(arr));
